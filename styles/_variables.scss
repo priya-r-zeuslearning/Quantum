@@ -1,0 +1,37 @@
+$bgColor: #eeeeee;
+$navBgColor: rgba(9, 25, 39, 0.877);
+$dividerColor: #0000001e;
+$footerBg: #e0e1e1;
+$badgeBg: #2a7ff3;
+$navTextColor: #3fd28b;
+$btnColor: #3FD28B;
+$tabBg: #8ddc97;
+$cardExpiredBg: #ffe4e6;
+$errorText: red;
+$textTernary: #1f7a54;
+$textSecondary: #666666;
+$textPrimary:#222222;
+$info: #3ac7ec;
+
+$quickSand: '"Quicksand", sans-serif';
+
+@mixin bodyAlign{
+    
+  margin: 0;
+  padding: 0;
+  
+  font-family: #{$quickSand};
+
+}
+@mixin pagewrapper{
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+@mixin divCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

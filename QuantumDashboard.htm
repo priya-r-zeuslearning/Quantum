@@ -11,7 +11,12 @@
       crossorigin="anonymous"
     /> -->
     <title>Document</title>
-    <link rel="stylesheet" href="DashboardStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/quantumDashboard.css" />
+    <script>
+      function favorite() {}
+    </script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -42,11 +47,24 @@
                 </div>
               </div>
               <button>
-                <img src="images/hamburger-menu.svg" alt="" />
+                <img
+                  src="images/hamburger-menu.svg"
+                  alt=""
+                  onclick="OpenMenu()"
+                />
               </button>
             </div>
           </div>
         </div>
+        <!-- <div class="ham-menu">
+          <div class="ham-menu-links">
+            <a href="" class="active">Dashboard</a>
+            <a href="">Content</a>
+            <a href="">user</a>
+            <a href="">Reports</a>
+            <a href="">admin</a>
+          </div>
+        </div> -->
         <!-- Main Content -->
         <div class="container">
           <div class="headtab">
@@ -63,7 +81,7 @@
                   src="images/classes.svg"
                   height="32px"
                   width="29px"
-                /><span class="numcourses">4</span> Courses</a
+                /><span class="numcourses">4</span> Classes</a
               >
             </div>
           </div>
@@ -81,14 +99,22 @@
           </div>
           <div class="card-container">
             <!-- this is will be grid view -->
-             <!-- card 1 -->
+            <!-- card 1 -->
             <div class="card">
               <div class="card-content">
-                <div class="card-image"><img src="images/imageMask-1.svg" alt=""></div>
+                <div class="card-image">
+                  <img src="images/imageMask-1.svg" alt="" />
+                </div>
                 <div class="card-text">
                   <div class="card-heading">
-                    <div>Acceleration</div>
-                    <div class="favorite"><img src="images/favourite.svg" alt=""></div>
+                    <div class="heading-text">Acceleration</div>
+                    <div class="favorite">
+                      <img
+                        src="images/favourite.svg"
+                        alt=""
+                        onclick="favorite()"
+                      />
+                    </div>
                   </div>
                   <div class="subject-details">
                     <span class="subject">Physics</span>
@@ -99,48 +125,53 @@
                         >7 <span class="addgrade">+2</span></span
                       ></span
                     >
-                    </div>
-                    <div class="topic-details">
-                      
-                    <div class="units">4<span>Units</span></div>
-                        
-                     <div class="lessons">18<span>Lessons</span></div>
-                     <div class="topics">24<span>Topics</span></div>
-                    </div>
+                  </div>
+                  <div class="topic-details">
+                    <div class="text-details">
+                      <div class="units">4<span>Units</span></div>
 
+                      <div class="lessons">18<span>Lessons</span></div>
+                      <div class="topics">24<span>Topics</span></div>
+                    </div>
                     <select name="" id="class-select">
-                          <option value="">All Classes</option>
+                      <option value="">All Classes</option>
                       <option value="">Mr. Frank's Class B</option>
                     </select>
-                    <div class="details">
-                      <div class="students">
-                        <div class="nos">300</div>
-                        students
-                      </div>
-                      <span>|</span>
-                      <div class="dates">
-                        <div class="start">21-Jan-2020</div> -
-                        <div class="end">21-Aug-2020</div>
-                      </div>
+                  </div>
+
+                  <div class="details">
+                    <div class="students">
+                      <!-- <div class="nos">300</div> -->
+                      50 students
+                    </div>
+                    <span>|</span>
+                    <div class="dates">
+                      <div class="start">21-Jan-2020 - 21-Aug-2020</div>
                     </div>
                   </div>
-                
+                </div>
               </div>
               <div class="card-icons">
-                <img src="images/preview.svg" alt="">
-                <img src="images/manage course.svg" alt="">
-                <img src="images/grade submissions.svg" alt="">
-                <img src="images/reports.svg" alt="">
+                <img src="images/preview.svg" alt="" />
+                <img src="images/manage course.svg" alt="" />
+                <img src="images/grade submissions.svg" alt="" />
+                <img src="images/reports.svg" alt="" />
               </div>
             </div>
             <!-- card 2 -->
-                   <div class="card">
+            <div class="card">
               <div class="card-content">
-                <div class="card-image"><img src="images/imageMask-2.svg" alt=""></div>
+                <div class="card-image">
+                  <img src="images/imageMask-2.svg" alt="" />
+                </div>
                 <div class="card-text">
                   <div class="card-heading">
-                    <div>Displacement, Velocity and Speed</div>
-                    <div class="favorite"><img src="images/favourite.svg" alt=""></div>
+                    <div class="heading-text">
+                      Displacement, Velocity and Speed
+                    </div>
+                    <div class="favorite">
+                      <img src="images/favourite.svg" alt="" />
+                    </div>
                   </div>
                   <div class="subject-details">
                     <span class="subject">Physics</span>
@@ -151,148 +182,173 @@
                         >6 <span class="addgrade">+3</span></span
                       ></span
                     >
-                    </div>
-                    <div class="topic-details">
-                      
-                    <div class="units">4<span>Units</span></div>
-                        
-                     <div class="lessons">18<span>Lessons</span></div>
-                     <div class="topics">24<span>Topics</span></div>
-                    </div>
-
-                    <select name="" id="class-select" disabled>
-                            <option value="">No Classes</option>
-                      <option value="">Mr. Frank's Class B</option>
-                    </select>
-                    <div class="details">
-                      <div class="students">
-                        <div class="nos">300</div>
-                        students
-                      </div>
-                      <span>|</span>
-                      <div class="dates">
-                        <div class="start">21-Jan-2020</div> -
-                        <div class="end">21-Aug-2020</div>
-                      </div>
-                    </div>
                   </div>
-                
+                  <div class="topic-details">
+                    <div class="text-details">
+                      <div class="units">2<span>Units</span></div>
+
+                      <div class="lessons">15<span>Lessons</span></div>
+                      <div class="topics">20<span>Topics</span></div>
+                    </div>
+                    <select name="" id="class-select" disabled>
+                      <option value="">No Classes</option>
+                      <!-- <option value="">Mr. Frank's Class B</option> -->
+                    </select>
+                  </div>
+                  <!-- <div class="details">
+                    <div class="students">
+                      <div class="nos">300</div>
+                      students
+                    </div>
+                    <span>|</span>
+                    <div class="dates">
+                      <div class="start">21-Jan-2020</div>
+                      -
+                      <div class="end">21-Aug-2020</div>
+                    </div>
+                  </div> -->
+                </div>
               </div>
               <div class="card-icons">
-                <img src="images/preview.svg" alt="">
-                <img src="images/manage course.svg" alt="">
-                <img src="images/grade submissions.svg" alt="">
-                <img src="images/reports.svg" alt="">
+                <img src="images/preview.svg" alt="" />
+                <img
+                  src="images/manage course.svg"
+                  alt=""
+                  id="not-active-icon"
+                />
+                <img
+                  src="images/grade submissions.svg"
+                  alt=""
+                  id="not-active-icon"
+                />
+                <img src="images/reports.svg" alt="" />
               </div>
             </div>
 
             <!-- card 3 -->
-                   <div class="card">
-                     
+            <div class="card">
               <div class="card-content">
-               
-                <div class="card-image"><img src="images/imageMask-1.svg" alt=""></div>
+                <div class="card-image">
+                  <img src="images/imageMask.svg" alt="" />
+                </div>
                 <div class="card-text">
                   <div class="card-heading">
-                    <div>Introduction to Biology: Micro organisms and how they affect the other Life Systems in En...</div>
-                    <div class="favorite"><img src="images/favourite.svg" alt=""></div>
+                    <div class="heading-text">
+                      Introduction to Biology: Micro organisms and how they
+                      affect the other Life Systems in En...
+                    </div>
+                    <div class="favorite">
+                      <img src="images/favourite.svg" alt="" />
+                    </div>
                   </div>
                   <div class="subject-details">
-                    <span class="subject">Physics</span>
+                    <span class="subject">Biology</span>
                     <span>|</span>
                     <span class="grade"
                       >Grade
                       <span class="gradenum"
-                        >7 <span class="addgrade">+2</span></span
+                        >4 <span class="addgrade">+1</span></span
                       ></span
                     >
-                    </div>
-                    <div class="topic-details ">
-                      
-                    <div class="units">4<span>Units</span></div>
-                        
-                     <div class="lessons">18<span>Lessons</span></div>
-                     <div class="topics">24<span>Topics</span></div>
-                    </div>
-
-                    <select name="" id="class-select">
-                            <option value="">All Classes</option>
-                      <option value="">Mr. Frank's Class B</option>>
-                    </select>
-                    <div class="details">
-                      <div class="students">
-                        <div class="nos">300</div>
-                        students
-                      </div>
-                      <span>|</span>
-                      <div class="dates">
-                        <div class="start">21-Jan-2020</div> -
-                        <div class="end">21-Aug-2020</div>
-                      </div>
-                    </div>
                   </div>
-                
+                  <div class="topic-details">
+                    <div class="text-details">
+                      <div class="units">4<span>Units</span></div>
+
+                      <div class="lessons">18<span>Lessons</span></div>
+                      <div class="topics">24<span>Topics</span></div>
+                    </div>
+                    <select name="" id="class-select">
+                      <option value="">All Classes</option>
+                      <option value="">Mr. Frank's Class B</option>
+                    </select>
+                  </div>
+
+                  <div class="details">
+                    <div class="students">
+                      <!-- <div class="nos">300</div> -->
+                      300 students
+                    </div>
+                    <!-- <span>|</span>
+                    <div class="dates">
+                      <div class="start">21-Jan-2020</div>
+                      -
+                      <div class="end">21-Aug-2020</div>
+                    </div> -->
+                  </div>
+                </div>
               </div>
               <div class="card-icons">
-                <img src="images/preview.svg" alt="">
-                <img src="images/manage course.svg" alt="">
-                <img src="images/grade submissions.svg" alt="">
-                <img src="images/reports.svg" alt="">
+                <img src="images/preview.svg" alt="" />
+                <img
+                  src="images/manage course.svg"
+                  alt=""
+                  id="not-active-icon"
+                />
+                <img
+                  src="images/grade submissions.svg"
+                  alt=""
+                  id="not-active-icon"
+                />
+                <img src="images/reports.svg" alt="" />
               </div>
             </div>
             <!-- CARD 4 -->
-                     <div class="card">
-                        <div class="card-expired">
-                    Expired
-                </div>
+            <div class="card">
+              <div class="card-expired">Expired</div>
               <div class="card-content">
-                <div class="card-image"><img src="images/imageMask-3.svg" alt=""></div>
+                <div class="card-image">
+                  <img src="images/imageMask-3.svg" alt="" />
+                </div>
                 <div class="card-text">
                   <div class="card-heading">
-                    <div>Acceleration</div>
-                    <div class="favorite"><img src="images/favourite.svg" alt=""></div>
+                    <div class="heading-text">
+                      Introduction to High School Mathematics
+                    </div>
+                    <div class="favorite">
+                      <img src="images/favourite.svg" alt="" id="not-active" />
+                    </div>
                   </div>
+
                   <div class="subject-details">
-                    <span class="subject">Physics</span>
+                    <span class="subject">Mathematics</span>
                     <span>|</span>
                     <span class="grade"
                       >Grade
                       <span class="gradenum"
-                        >7 <span class="addgrade">+2</span></span
+                        >8 <span class="addgrade">+3</span></span
                       ></span
                     >
-                    </div>
-                    <!-- <div class="topic-details">
-                      
-                    <div class="units">4<span>Units</span></div>
-                        
-                     <div class="lessons">18<span>Lessons</span></div>
-                     <div class="topics">24<span>Topics</span></div>
+                  </div>
+                  <div class="topic-details">
+                    <!-- <div class="text-details">
+                      <div class="units">4<span>Units</span></div>
+ 
+                      <div class="lessons">18<span>Lessons</span></div>
+                      <div class="topics">24<span>Topics</span></div>
                     </div> -->
-
                     <select name="" id="class-select">
-                        <option value="">All Classes</option>
+                      <option value="">All Classes</option>
                       <option value="">Mr. Frank's Class B</option>
                     </select>
-                    <div class="details">
-                      <div class="students">
-                        <div class="nos">300</div>
-                        students
-                      </div>
-                      <span>|</span>
-                      <div class="dates">
-                        <div class="start">14-Oct-2019 </div> -
-                        <div class="end">20-Oct-2020</div>
-                      </div>
+                  </div>
+                  <div class="details">
+                    <div class="students">
+                      <!-- <div class="nos">44</div> -->
+                      44 students
+                    </div>
+                    <span>|</span>
+                    <div class="dates">
+                      <div class="start">14-Oct-2019 - 20-Oct-2020</div>
                     </div>
                   </div>
-                
+                </div>
               </div>
               <div class="card-icons">
-                <img src="images/preview.svg" alt="">
-                <img src="images/manage course.svg" alt="">
-                <img src="images/grade submissions.svg" alt="">
-                <img src="images/reports.svg" alt="">
+                <img src="images/preview.svg" alt="" />
+                <img src="images/manage course.svg" alt="" />
+                <img src="images/grade submissions.svg" alt="" />
+                <img src="images/reports.svg" alt="" />
               </div>
             </div>
           </div>

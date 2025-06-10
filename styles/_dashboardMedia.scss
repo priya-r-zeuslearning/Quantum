@@ -1,0 +1,128 @@
+.card-container {
+  display: grid;
+
+  @media (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  width: 100%;
+
+  @media (max-width: 575px) {
+    min-width: auto;
+  }
+}
+
+.navbar-links {
+  @media (max-width: 767px) {
+    a {
+      display: none;
+    }
+
+    .nav-icons {
+      width: 60%;
+      margin-left: auto;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      background: none;
+      outline: none;
+      border: none;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .nav-icons {
+      width: 50%;
+    }
+
+    button {
+      display: flex;
+    }
+  }
+}
+
+.ham-menu {
+  @media (max-width: 575px) {
+    width: 100%;
+    height: 100vh;
+    margin-right: auto;
+    background-color: #666666;
+  }
+}
+
+.ham-menu-links {
+  @media (max-width: 575px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filter {
+  div {
+    @media (min-width: 576px) and (max-width: 767px) {
+      width: 40%;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      width: 30%;
+    }
+
+    @media (min-width: 992px) {
+      width: 20%;
+    }
+  }
+
+  select {
+    @media (max-width: 575px) {
+      width: 20%;
+    }
+  }
+}
+
+#class-select {
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.navbar-container {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.navbar-links {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 60%;
+
+    a {
+      width: 40%;
+    }
+
+    .nav-icons {
+      width: 60%;
+      margin-left: auto;
+    }
+  }
+}

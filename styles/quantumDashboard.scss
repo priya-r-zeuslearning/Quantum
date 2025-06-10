@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "./navbar";
+@import "./card";
+@import "./footer";
+@import "./dashboardMedia";
+body {
+  @include bodyAlign();
+
+  background: $bgColor;
+}
+.page-wrapper {
+  @include pagewrapper();
+}
+.container {
+  flex: 1;
+  padding: 20px;
+}
+

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "./navbar";
+@import "./form";
+@import "./footer";
+@import "./mediaQueries";
+body{
+    @include bodyAlign();
+
+    background: $bgColor;
+}
+.container{
+    @include divCenter();
+    flex:1;
+}
+.page-wrapper{
+    @include pagewrapper();
+}

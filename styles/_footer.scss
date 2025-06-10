@@ -1,0 +1,53 @@
+@import "./variables";
+.footer {
+  margin-bottom: 0;
+    color: #616161;
+  margin-top: auto;
+    @include divCenter();
+  flex-direction: column;
+
+  .footer-info {
+    @include divCenter();
+    gap: 10px; 
+    height: 40px;
+    background-color: $footerBg;
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    flex-wrap: wrap;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    img {
+      height: 24px;
+      width: 90px;
+    }
+    b,
+    span {
+      margin: 0;
+      padding: 0;
+      display: inline;
+    }
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 5px;
+  a {
+    text-decoration: none;
+    color: $textTernary;
+    font-size: 14px;
+    font-weight: 500;
+    span {
+      color: $dividerColor;
+    }
+  }
+}
+
+
+
