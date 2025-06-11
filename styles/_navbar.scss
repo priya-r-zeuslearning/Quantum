@@ -2,27 +2,29 @@
 
 .bg-image {
   width: 100%;
-  height: 57px;
+  height: 56px;
   position: absolute;
   z-index: -1;
   background: url("../images/header\ pattern\ svg.svg ");
 }
-.navbar {
-  background-color: $navBgColor;
-  padding-left: 2em;
-  z-index: 3;
-  border-bottom: 3px solid $info;
-  display: flex;
-  align-items: center;
-  img {
-    margin-top: 10px;
-    margin-bottom: 3px;
-  }
-}
+// .navbar {
+//   background-color: $navBgColor;
+//   padding-left: 2em;
+//   z-index: 3;
+//   border-bottom: 3px solid $info;
+//   display: flex;
+//   align-items: center;
+//   img {
+//     margin-top: 10px;
+//     margin-bottom: 3px;
+//   }
+// }
 .nav-icons {
   display: flex;
   width: 20%;
+    height: 30px;
   justify-content: space-between;
+    align-items: center;
 }
 .navbar-links {
   margin-left: auto;
@@ -31,6 +33,9 @@
   margin-bottom: 0;
   display: flex;
   justify-content: space-between;
+  button {
+    display: none;
+  }
   a {
     text-transform: uppercase;
     text-decoration: none;
@@ -40,11 +45,14 @@
     margin-bottom: 0;
     height: 53px;
     @include divCenter();
+    &:hover,
+    &:active {
+      color: white;
+      border-bottom: 3.5px white solid;
+    }
   }
 }
-.base1,
-.base2,
-.base3 {
+@mixin base(){
   height: 24px;
   width: 24px;
   cursor: pointer;
@@ -52,13 +60,41 @@
   background-position: right;
   position: relative;
 }
-.base1 {
-  background-image: url("../images/alerts.svg");
+.base1,
+.base2,
+.base3 {
+
+  &:hover{
+  
+    .alert{
+      display: none;
+    }
+  }
+
+  
+}
+
+  .base1 {
+  background-image: url("../images/alert-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+
+  &.white-icon {
+    filter: brightness(0) invert(1); // Turn the background image white
+  }
+
+
 }
 .base2 {
+  @include base();
+
   background-image: url("../images/announcements.svg");
 }
 .base3 {
+  @include base();
+
   background-image: url("../images/account_circle.svg");
   height: 32px;
   /* border-radius: 50%;
@@ -96,17 +132,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.nav-icons {
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-.navbar-links a:hover,
-.navbar-links .active {
-  color: white;
-  border-bottom: 3.5px white solid;
-}
-.navbar-links button {
-  display: none;
 }

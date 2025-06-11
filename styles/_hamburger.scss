@@ -1,0 +1,129 @@
+@import "./announcement";
+@mixin preview($isHamburger: false) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  position: absolute;
+  background: white;
+
+  margin-top: 40px;
+  right: 1%;
+  top: 1.9%;
+  z-index: 100;
+  border: 1px solid #ccc;
+  pointer-events: none;
+
+  @if $isHamburger {
+    height: 288px;
+    width: 280px;
+  } @else {
+    height: 582px;
+    width: 315px;
+  }
+}
+.alert-wrapper,
+.announcement-wrapper,
+.hamburger-wrapper {
+  position: relative;
+  display: inline-block; // Ensure they behave as one unit
+}
+
+.alert-preview,
+.announcement-preview,
+.ham-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 315px;
+  height: auto;
+  max-height: 582px;
+  background: white;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+}
+
+.alert-wrapper:hover .alert-preview,
+.announcement-wrapper:hover .announcement-preview,
+.hamburger-wrapper:hover .ham-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger-btn {
+  height: 100%;
+}
+
+.ham-menu.show {
+  display: block;
+  opacity: 1;
+}
+.ham-menu {
+  color: $textTernary;
+  font-weight: 500;
+  font-size: 14px;;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  top: 51px;;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    &.has-submenu {
+      .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .dropdown-arrow {
+        width: 12px;
+        height: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        background-color: #f3f3f3;
+      }
+      &:hover .ham-sub-menu {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .ham-sub-menu {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    background-color: #f3f3f3;
+    // border-left: 2px solid #ccc;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}

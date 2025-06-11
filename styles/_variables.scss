@@ -14,12 +14,29 @@ $textPrimary:#222222;
 $info: #3ac7ec;
 
 $quickSand: '"Quicksand", sans-serif';
-
+@mixin navbar($border :false ){
+ background-color: $navBgColor;
+  padding: 0 2em;
+  z-index: 3;
+  @if $border{
+border-bottom: 3px solid $info;
+  } @else{
+    height: 56px;
+  }
+  
+  display: flex;
+  align-items: center;
+  img {
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+}
 @mixin bodyAlign{
     
   margin: 0;
   padding: 0;
-  
+  font-size: 14px;
+  font-weight: 500;
   font-family: #{$quickSand};
 
 }
@@ -34,4 +51,9 @@ $quickSand: '"Quicksand", sans-serif';
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@mixin hover(){
+  &:hover{
+      filter: brightness(0) invert(1);
+  }
 }

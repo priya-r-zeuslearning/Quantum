@@ -3,6 +3,7 @@
 @import "./form";
 @import "./footer";
 @import "./mediaQueries";
+@import "./variables";
 body{
     @include bodyAlign();
 
@@ -14,4 +15,7 @@ body{
 }
 .page-wrapper{
     @include pagewrapper();
+}
+.navbar{
+  @include navbar($border: true);
 }

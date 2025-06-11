@@ -1,0 +1,87 @@
+@import "./variables";
+.announcement-preview, .alert-preview {
+    overflow-x: hidden;
+  overflow-y: scroll;
+padding: 0;
+.show-all{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    height: 48px;
+    background-color: white;
+    .create, .view{
+        color: $textTernary;
+        text-transform: uppercase;
+
+    }
+    span{
+        color:$dividerColor;
+        font-size: 30px;
+    }
+}
+
+  .ann-preview-content, .alert-preview-content {
+    padding: 16px;
+    border-bottom: 1px solid $dividerColor;
+    display: flex;
+    width: 283px;
+    min-height: 64px;
+   background-color: white;
+    flex-direction: column;
+     justify-content: space-between;
+    font-size: 12px;
+    margin: 0;
+    *{
+        margin: 0;
+    }
+    .message {
+      font-size: 14px;
+      margin-top: 8px;
+    //   margin-bottom: 8px;
+   
+    }
+    .files {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      .material-symbols-outlined {
+        height: 5px;
+        width: 5px;
+      }
+      span {
+        color: #6e6e6e;
+        span {
+          margin-right: 4px;
+          color: #6E6E6E;
+        }
+      }
+    }
+    .course{
+        margin: 8px 0;
+        color: #6E6E6E;
+      
+    }
+    .name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $textPrimary;
+      img {
+        width: 15px;
+        height: 18px;
+      }
+    }
+   
+  }
+   .imp{
+    background-color: #FFFFEE;
+}
+}
+.alert-preview-content{
+    .files{
+         margin-left: auto;
+    }
+}

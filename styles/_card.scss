@@ -3,7 +3,7 @@
   width: 100%;
   height: 45px;
   margin-top: 20px;
-  border-bottom: 2px solid #0000001a;
+  border-bottom: 2px solid $dividerColor;
   justify-content: space-between;
 
   div {
@@ -29,14 +29,14 @@
     outline: none;
     font-size: 16px;
     border: none;
-    border-bottom: #0000002c 1px solid;
+    border-bottom: $dividerColor 1px solid;
     padding-left: 0;
-    font-family: "Quicksand", sans-serif;
+    font-family: #{$quickSand};
     font-weight: 500;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url("images/arrow-down.svg") no-repeat right 10px center;
+    background: url("../images/arrow-down.svg") no-repeat right 10px center;
     background-size: 20px;
   }
 
@@ -51,7 +51,7 @@
 
 .headtab {
   height: 64px;
-  background-color: #8ddc97;
+  background-color: $tabBg;
   display: flex;
   border-radius: 5px;
   justify-content: center;
@@ -103,6 +103,7 @@
   display: flex;
   flex-direction: column;
   min-width: 476px;
+  max-width: 571px;
   position: relative;
   height: 246px;
   margin: 0;
@@ -136,7 +137,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 80%;
-    color: #666666;
+    color: $textSecondary;
 
     .topic-details {
       display: flex;
@@ -158,7 +159,7 @@
           margin-left: 3px;
           font-size: 12px;
           font-weight: 500;
-          color: #666666;
+          color: $textSecondary;
         }
       }
     }
@@ -186,7 +187,7 @@
       }
 
       span {
-        color: #0000001a;
+        color: $dividerColor;
       }
 
       .dates {
@@ -205,13 +206,13 @@
         margin-right: 8px;
 
         &:nth-child(2) {
-          color: #0000001a;
+          color: $dividerColor;
         }
       }
     }
 
     .addgrade {
-      color: #1f7a54;
+      color: $textTernary;
     }
   }
 
@@ -313,6 +314,153 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("images/arrow-down.svg") no-repeat right 10px center;
+  background: url("../images/arrow-down.svg") no-repeat right 10px center;
   background-size: 20px;
+}
+
+.card-container {
+  display: grid;
+
+  @media (max-width: 575px) {
+    grid-template-columns: 571px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+.card {
+  width: 100%;
+
+  @media (max-width: 575px) {
+    min-width: auto;
+  }
+   
+}
+
+.navbar-links {
+  @media (max-width: 575px) {
+    .nav-icons {
+      width: 60%;
+    }
+    a {
+      display: none;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      background: none;
+      outline: none;
+      border: none;
+    }
+    .nav-icons {
+      width: 50%;
+      margin-left: auto;
+    }
+  }
+  @media (max-width: 767px) {
+    a {
+      display: none;
+    }
+
+    .nav-icons {
+      width: 60%;
+      margin-left: auto;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      background: none;
+      outline: none;
+      border: none;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    a {
+      display: none;
+    }
+    .nav-icons {
+      width: 60%;
+      margin-left: auto;
+    }
+    button {
+    display: flex;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  }
+  
+}
+
+
+
+.filter {
+  div {
+    @media (max-width: 575px){
+      width: 50%;
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      width: 40%;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      width: 30%;
+    }
+
+    @media (min-width: 992px) {
+      width: 20%;
+    }
+  }
+
+  select {
+    @media (max-width: 575px) {
+      width: 80%;
+    }
+  }
+}
+
+#class-select {
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.navbar-container {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.navbar-links {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 60%;
+
+    a {
+      width: 50%;
+    }
+
+    .nav-icons {
+      width: 60%;
+      margin-left: auto;
+    }
+  }
 }
