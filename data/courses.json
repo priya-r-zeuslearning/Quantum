@@ -62,21 +62,5 @@
     "expired": true,
     "activeIcons": true,
     "favorite":false
-  }, 
-   {
-    "title": "Introduction to High School Mathematics",
-    "subject": "Mathematics",
-    "grade": "8",
-    "addgrade": "+3",
-    "units": null,
-    "lessons": null,
-    "topics": null,
-    "students": 44,
-    "dates": "14-Oct-2019 - 20-Oct-2020",
-    "image": "images/imageMask-3.svg",
-    "classes": ["All Classes", "Mr. Frank's Class B"],
-    "expired": true,
-    "activeIcons": true,
-    "favorite":false
   }
 ]

@@ -134,7 +134,6 @@ img.base2.white-icon {
 }
 .filter select {
   width: 70%;
-  outline: none;
   font-size: 16px;
   border: none;
   border-bottom: rgba(0, 0, 0, 0.1176470588) 1px solid;
