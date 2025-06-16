@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+button {
+  background: none;
+  border: none;
+}
+
 .bg-image {
   width: 100%;
   height: 56px;
@@ -38,67 +43,9 @@
   justify-content: center;
   align-items: center;
 }
-.navbar-links a:hover, .navbar-links a:active {
+.navbar-links a:hover, .navbar-links a.active {
   color: white;
   border-bottom: 3.5px white solid;
-}
-
-.base1:hover .alert,
-.base2:hover .alert,
-.base3:hover .alert {
-  display: none;
-}
-
-.base1 {
-  background-image: url("../images/alert-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-}
-.base1.white-icon {
-  filter: brightness(0) invert(1);
-}
-
-.base2 {
-  height: 24px;
-  width: 24px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: right;
-  position: relative;
-  background-image: url("../images/announcements.svg");
-}
-
-.base3 {
-  height: 24px;
-  width: 24px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: right;
-  position: relative;
-  background-image: url("../images/account_circle.svg");
-  height: 32px;
-  /* border-radius: 50%;
-  border: 1px solid #3FD28B; */
-  width: 32px;
-}
-.base3 .alert {
-  background-color: white;
-  top: -2%;
-  right: 0;
-  left: 60%;
-  bottom: 80%;
-}
-.base3 .noti-count {
-  font-size: 8px;
-  color: black;
-}
-
-.noti-count {
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
 }
 
 .alert {
@@ -114,6 +61,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img.base1,
+img.base2 {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+img.base1.white-icon,
+img.base2.white-icon {
+  filter: brightness(0) invert(1);
+}
+
+.base3 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/account_circle.svg");
+}
+.base3 #user {
+  background-color: white;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.base3 #user .noti-count {
+  color: black;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.noti-count {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .filter {
@@ -220,7 +213,7 @@
 }
 .card .card-content {
   display: flex;
-  margin-top: 25px;
+  margin-top: 10px;
   padding: 0 16px 0 24px;
   justify-content: space-between;
 }
@@ -325,6 +318,7 @@
   margin: 0;
 }
 .card .card-image img {
+  margin-top: 25px;
   width: 132px;
   height: 157px;
 }
@@ -387,7 +381,6 @@
 #class-select {
   min-width: 150px;
   width: 90%;
-  outline: none;
   font-size: 16px;
   border: none;
   border-bottom: rgba(0, 0, 0, 0.1725490196) 1px solid;
@@ -471,8 +464,8 @@
     border: none;
   }
   .navbar-links img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -543,9 +536,16 @@
   }
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .announcement-preview, .alert-preview {
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: 1px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   padding: 0;
 }
 .announcement-preview .show-all, .alert-preview .show-all {
@@ -633,16 +633,25 @@
 .announcement-preview,
 .ham-menu {
   position: absolute;
-  top: 40px;
+  top: 50px;
+  border-radius: 2px;
   right: 0;
   width: 315px;
+  scrollbar-color: rgba(0, 0, 0, 0.4470588235);
+  scrollbar-width: thin;
+  scrollbar-gutter: unset;
   height: auto;
   max-height: 582px;
   background: white;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 100;
+}
+
+::webkit-scrollbar-button {
+  display: none;
 }
 
 .alert-wrapper:hover .alert-preview,
@@ -693,7 +702,7 @@
 .ham-menu li.has-submenu:hover {
   background-color: #f3f3f3;
 }
-.ham-menu li.has-submenu:hover .ham-sub-menu {
+.ham-menu li.has-submenu:hover .ham-sub-menu, .ham-menu li.has-submenu:focus .ham-sub-menu {
   max-height: 500px;
   opacity: 1;
   visibility: visible;
@@ -717,6 +726,15 @@
 .show {
   opacity: 1;
   visibility: visible;
+}
+
+.hamburger-menu.white-icon {
+  filter: brightness(0) invert(1);
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 .footer {
@@ -812,4 +830,16 @@ body {
 .navbar img {
   margin-top: 10px;
   margin-bottom: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }/*# sourceMappingURL=quantumDashboard.css.map */

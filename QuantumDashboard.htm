@@ -3,19 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css">
-      <link -->
-    <!-- href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    /> -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=attach_file"
     />
     <title>Document</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles/quantumDashboard.css" />
     <style>
@@ -24,214 +16,173 @@
         font-size: 12px;
       }
     </style>
-    <script>
-      function favorite() {}
-    </script>
   </head>
   <body>
     <div class="page-wrapper">
-      <div class="navbar-conatiner">
-        <div class="bg-image"></div>
-        <div class="navbar">
-          <a href=""><img src="images/logo used in header.svg" alt="" /></a>
-          <div class="navbar-links">
-            <a href="" class="active">Dashboard</a>
-            <a href="">Content</a>
-            <a href="">user</a>
-            <a href="">Reports</a>
-            <a href="">admin</a>
-            <div class="nav-icons">
-              <div class="alert-wrapper">
-                <div class="alert-icon base1">
-                  <div class="alert">
+      <!-- Navbar container: Fix typo in class -->
+      <div class="navbar-container" role="banner">
+        <div class="bg-image" aria-hidden="true"></div> <!-- Decorative -->
+
+        <nav class="navbar" aria-label="Primary navigation">
+          <a href="/" aria-label="Homepage">
+            <img src="images/logo used in header.svg" alt="Company Logo" />
+          </a>
+          <div class="navbar-links" role="menubar">
+            <a href="#" class="active" role="menuitem" aria-current="page">Dashboard</a>
+            <a href="#" role="menuitem">Content</a>
+            <a href="#" role="menuitem">User</a>
+            <a href="#" role="menuitem">Reports</a>
+            <a href="#" role="menuitem">Admin</a>
+
+            <div class="nav-icons" role="region" aria-label="User notifications and menu">
+              <div class="alert-wrapper" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="Alerts">
+                <div class="alert-icon">
+                  <img src="images/alerts.svg" class="base1" alt="Alerts Icon" />
+                  <div class="alert" aria-live="polite" aria-atomic="true">
                     <div class="noti-count">2</div>
                   </div>
-                  <div class="alert-preview">
+                  <div class="alert-preview" aria-hidden="true">
                     <div class="alert-preview-content imp">
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
-                        <!-- <span>
-                          <span class="material-symbols-outlined">
-                            attach_file
-                          </span>
-                          2 files are attached</span
-                        > -->
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
                     <div class="show-all">
-                      <div class="view">Show all</div>
+                      <div class="view" tabindex="0" role="button">Show all</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="announcement-wrapper">
-                <div class="announcement-icon base2">
-                  <div class="alert">
+
+              <div class="announcement-wrapper" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Announcements">
+                <div class="announcement-icon">
+                  <img src="images/announcements.svg" class="base2" alt="Announcements Icon" />
+                  <div class="alert" aria-live="polite" aria-atomic="true">
                     <div class="noti-count">1</div>
                   </div>
-                  <div class="announcement-preview">
-                    <div class="ann-preview-content">
+                  <div class="announcement-preview" aria-hidden="true">
+                    <!-- Each announcement should have role="article" -->
+                    <div class="ann-preview-content" role="article" aria-label="Announcement from PA Wilson Kumar">
                       <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
+                        <span><span style="color: #6e6e6e">PA:</span> Wilson Kumar</span>
+                        <img src="images/account_circle.svg" alt="Profile picture of Wilson Kumar" />
                       </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
                         <span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined" aria-hidden="true">
                             attach_file
                           </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                          2 files are attached
+                        </span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
-                    <div class="ann-preview-content imp">
+                     <div class="ann-preview-content" role="article" aria-label="Announcement from PA Wilson Kumar">
                       <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
+                        <span><span style="color: #6e6e6e">PA:</span> Wilson Kumar</span>
+                        <img src="images/account_circle.svg" alt="Profile picture of Wilson Kumar" />
                       </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
                         <span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined" aria-hidden="true">
                             attach_file
                           </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                          2 files are attached
+                        </span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
-                    <div class="ann-preview-content">
+                     <div class="ann-preview-content" role="article" aria-label="Announcement from PA Wilson Kumar">
                       <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
+                        <span><span style="color: #6e6e6e">PA:</span> Wilson Kumar</span>
+                        <img src="images/account_circle.svg" alt="Profile picture of Wilson Kumar" />
                       </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
                         <span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined" aria-hidden="true">
                             attach_file
                           </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                          2 files are attached
+                        </span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
-                    <div class="ann-preview-content">
+                     <div class="ann-preview-content" role="article" aria-label="Announcement from PA Wilson Kumar">
                       <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
+                        <span><span style="color: #6e6e6e">PA:</span> Wilson Kumar</span>
+                        <img src="images/account_circle.svg" alt="Profile picture of Wilson Kumar" />
                       </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
                         <span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined" aria-hidden="true">
                             attach_file
                           </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                          2 files are attached
+                        </span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
-                    <div class="ann-preview-content imp">
+                     <div class="ann-preview-content imp" role="article" aria-label="Announcement from PA Wilson Kumar">
                       <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
+                        <span><span style="color: #6e6e6e">PA:</span> Wilson Kumar</span>
+                        <img src="images/account_circle.svg" alt="Profile picture of Wilson Kumar" />
                       </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
+                      <div class="message">No classes will be held on 21st Nov</div>
                       <div class="course">Course: Mathematics 101</div>
                       <div class="files">
                         <span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined" aria-hidden="true">
                             attach_file
                           </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
+                          2 files are attached
+                        </span>
+                        <span>15-Sep-2018 at 07:21 pm</span>
                       </div>
                     </div>
-                    <div class="ann-preview-content">
-                      <div class="name">
-                        <span
-                          ><span style="color: #6e6e6e">PA:</span> Wilson
-                          Kumar</span
-                        >
-                        <img src="images/account_circle.svg" alt="" />
-                      </div>
-                      <div class="message">
-                        No classes will be held on 21st Nov
-                      </div>
-                      <div class="course">Course: Mathematics 101</div>
-                      <div class="files">
-                        <span>
-                          <span class="material-symbols-outlined">
-                            attach_file
-                          </span>
-                          2 files are attached</span
-                        >
-                        <span> 15-Sep-2018 at 07:21 pm</span>
-                      </div>
-                    </div>
+                    <!-- Repeat other announcements similarly -->
                     <div class="show-all">
-                      <div class="view">Show all</div>
+                      <div class="view" tabindex="0" role="button">Show all</div>
                       <span>|</span>
-                      <div class="create">create new</div>
+                      <div class="create" tabindex="0" role="button">Create new</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="base3">
-                <div class="alert">
+
+              <div class="base3" role="region" aria-label="User information">
+                <div id="user" tabindex="0" aria-label="User initials T">
                   <div class="noti-count">T</div>
                 </div>
               </div>
 
               <div class="hamburger-wrapper">
-                <button id="hamburger-btn">
+                <button id="hamburger-btn" tabindex=0 aria-expanded="false" aria-controls="hamburger-menu" aria-label="Toggle menu">
                   <img
+                  tabindex=0
                     class="hamburger-menu"
                     src="images/hamburger-menu.svg"
                     alt="Menu"
                   />
                 </button>
-                <ul class="ham-menu">
-                  <li>Dashboard</li>
-                  <li class="has-submenu">
-                    <div class="menu-item">
+                <ul class="ham-menu" id="hamburger-menu" role="menu" aria-hidden="true">
+                  <li role="none">
+                      <div class="menu-item" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="content-submenu">
+                      <span>Dashboard</span>
+                  
+                    </div>
+                  </li>
+                  <li class="has-submenu" role="none">
+                    <div class="menu-item" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="content-submenu">
                       <span>Content</span>
                       <img
                         class="dropdown-arrow"
@@ -239,81 +190,73 @@
                         alt="dropdown"
                       />
                     </div>
-                    <ul class="ham-sub-menu">
-                      <li>Course Catalog</li>
+                    <ul class="ham-sub-menu"  role="menu" aria-hidden="true">
+                      <li role="none">Course Catalog</li>
                     </ul>
                   </li>
-
-                  <li class="has-submenu">
-                    <div class="menu-item">
-                      <span>Users</span>
+                   <li class="has-submenu" role="none">
+                    <div class="menu-item" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="content-submenu">
+                      <span>User</span>
                       <img
                         class="dropdown-arrow"
                         src="images/arrow-down.svg"
                         alt="dropdown"
                       />
                     </div>
-                    <ul class="ham-sub-menu">
-                      <li>Course Catalog</li>
+                    <ul class="ham-sub-menu"  role="menu" aria-hidden="true">
+                      <li role="none">Course Catalog</li>
                     </ul>
                   </li>
-
-                  <li class="has-submenu">
-                    <div class="menu-item">
-                      <span>Report</span>
+                   <li class="has-submenu" role="none">
+                    <div class="menu-item" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="content-submenu">
+                      <span>reports</span>
                       <img
                         class="dropdown-arrow"
                         src="images/arrow-down.svg"
                         alt="dropdown"
                       />
                     </div>
-                    <ul class="ham-sub-menu">
-                      <li>Course Catalog</li>
+                    <ul class="ham-sub-menu"  role="menu" aria-hidden="true">
+                      <li role="none">Course Catalog</li>
                     </ul>
                   </li>
-
-                  <li class="has-submenu">
-                    <div class="menu-item">
-                      <span>Admin</span>
+                   <li class="has-submenu" role="none">
+                    <div class="menu-item" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="content-submenu">
+                      <span>admin</span>
                       <img
                         class="dropdown-arrow"
                         src="images/arrow-down.svg"
                         alt="dropdown"
                       />
                     </div>
-                    <ul class="ham-sub-menu">
-                      <li>Course Catalog</li>
+                    <ul class="ham-sub-menu"  role="menu" aria-hidden="true">
+                      <li role="none">Course Catalog</li>
                     </ul>
                   </li>
-
+       
                 </ul>
               </div>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
 
       <!-- Main Content -->
-      <div class="container">
+      <main class="container" role="main">
         <div class="headtab">
-          <div class="headtab-content">
-            <a href="" class="active"
-              ><img src="images/courses.svg" height="32px" width="24px" /><span
-                class="numcourses"
-                >4</span
-              >
-              Courses</a
-            >
-            <a href=""
-              ><img src="images/classes.svg" height="32px" width="29px" /><span
-                class="numcourses"
-                >4</span
-              >
-              Classes</a
-            >
+          <div class="headtab-content" role="tablist" aria-label="Course and Class tabs">
+            <a href="#" class="active" role="tab" aria-selected="true" tabindex="0">
+              <img src="images/courses.svg" height="32" width="24" alt="Courses Icon" />
+              <span class="numcourses">4</span> Courses
+            </a>
+            <a href="#" role="tab" aria-selected="false" tabindex="-1">
+              <img src="images/classes.svg" height="32" width="29" alt="Classes Icon" />
+              <span class="numcourses">4</span> Classes
+            </a>
           </div>
         </div>
-        <div class="filter">
+
+        <section class="filter" aria-label="Course filtering options">
           <span>Showing 4 of 4 courses</span>
           <div>
             <label for=""
@@ -322,168 +265,31 @@
                 <option value="Course Name">Course Name</option>
               </select></label
             >
-            <img src="images/sort.svg" alt="" />
+            <img src="images/sort.svg" alt="Sort Image" />
           </div>
+        </section>
+
+        <div class="card-container" aria-live="polite" aria-atomic="true" tabindex="-1">
+          <!-- Cards will be inserted here dynamically -->
         </div>
-        <div class="card-container"></div>
-        <!-- footer -->
-      </div>
-      <div class="footer">
+      </main>
+
+      <!-- footer -->
+      <footer class="footer" role="contentinfo">
         <div class="footer-links">
           <a href="#">About</a>
           <span>|</span>
           <a href="#">Contact us</a>
         </div>
         <div class="footer-info">
-          <img src="images/logo used in footer.svg" alt="" />
+          <img src="images/logo used in footer.svg" alt="Company Logo" />
           <span>|</span>
           <span>Copyright &copy; 2020-2021</span>
           <span><b>Zeus Systems Pvt.Ltd</b></span>
           <span>All rights reserved</span>
         </div>
-      </div>
+      </footer>
     </div>
-    <script>
-      fetch("data/courses.json")
-        .then((response) => response.json())
-        .then((data) => renderCourses(data));
-
-      function renderCourses(courses) {
-        const container = document.querySelector(".card-container");
-        container.innerHTML = "";
-
-        courses.forEach((course) => {
-          const card = document.createElement("div");
-          card.classList.add("card");
-          if (course.expired) {
-            card.innerHTML += `<div class="card-expired">Expired</div>`;
-          }
-          const favorite = course.favorite
-            ? ` <img src="images/favourite.svg" alt="" />`
-            : ` <img src="images/favourite.svg" alt="" id="not-active" />`;
-          const classOptions = course.classes
-            .map((cls) => `<option>${cls}</option>`)
-            .join("");
-          const selectHTML = course.classes.includes("No Classes")
-            ? `<select id="class-select" disabled>
-       ${classOptions}
-     </select>`
-            : `<select id="class-select">
-       ${classOptions}
-     </select>`;
-          const icons = `
-        <img src="images/preview.svg" alt="" />
-        <img src="images/manage course.svg" alt="" ${
-          !course.activeIcons ? 'id="not-active-icon"' : ""
-        } />
-        <img src="images/grade submissions.svg" alt="" ${
-          !course.activeIcons ? 'id="not-active-icon"' : ""
-        } />
-        <img src="images/reports.svg" alt="" />
-      `;
-
-          card.innerHTML += `
-        <div class="card-content">
-          <div class="card-image">
-            <img src="${course.image}" alt="" />
-          </div>
-          <div class="card-text">
-            <div class="card-heading">
-              <div class="heading-text">${course.title}</div>
-              <div class="favorite">
-                ${favorite}
-              </div>
-            </div>
-            <div class="subject-details">
-              <span class="subject">${course.subject}</span>
-              <span>|</span>
-              <span class="grade">Grade <span class="gradenum">${
-                course.grade
-              } <span class="addgrade">${course.addgrade}</span></span></span>
-            </div>
-            <div class="topic-details">
-              <div class="text-details">
-                ${
-                  course.units !== null
-                    ? `<div class="units">${course.units}<span>Units</span></div>`
-                    : ""
-                }
-                ${
-                  course.lessons !== null
-                    ? `<div class="lessons">${course.lessons}<span>Lessons</span></div>`
-                    : ""
-                }
-                ${
-                  course.topics !== null
-                    ? `<div class="topics">${course.topics}<span>Topics</span></div>`
-                    : ""
-                }
-              </div> ${selectHTML}
-            </div>
-            <div class="details">
-              ${
-                course.students !== null
-                  ? `<div class="students">${course.students} students</div>`
-                  : ""
-              }
-              ${
-                course.dates
-                  ? `<span>|</span><div class="dates"><div class="start">${course.dates}</div></div>`
-                  : ""
-              }
-            </div>
-          </div>
-        </div>
-        <div class="card-icons">${icons}</div>
-      `;
-
-          container.appendChild(card);
-        });
-      }
-     document
-  .querySelectorAll(".alert-wrapper, .announcement-wrapper, .hamburger-wrapper")
-  .forEach((wrapper) => {
-    const preview = wrapper.querySelector(
-      ".alert-preview, .announcement-preview, .ham-menu"
-    );
-
-    const baseIcon = wrapper.querySelector(".base1");
-    const alertBubble = wrapper.querySelector(".alert");
-
-    wrapper.addEventListener("mouseenter", () => {
-      preview.classList.add("show");
-
-      // Only for base1 (alert icon)
-      if (baseIcon) {
-        baseIcon.classList.add("white-icon"); // Add class to change icon
-      }
-      if (alertBubble) {
-        alertBubble.style.display = "none"; // Hide the red bubble
-      }
-    });
-
-    wrapper.addEventListener("mouseleave", () => {
-      preview.classList.remove("show");
-
-      if (baseIcon) {
-        baseIcon.classList.remove("white-icon");
-      }
-      if (alertBubble) {
-        alertBubble.style.display = "block";
-      }
-    });
-  });
-
-      //     const hamWrapper = document.getElementById("hamburger-wrapper");
-      // const menu = hamWrapper.querySelector(".ham-menu");
-
-      // hamWrapper.addEventListener("mouseenter", () => {
-      //   menu.classList.add("show");
-      // });
-
-      // hamWrapper.addEventListener("mouseleave", () => {
-      //   menu.classList.remove("show");
-      // });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -46,80 +46,15 @@
     height: 53px;
     @include divCenter();
     &:hover,
-    &:active {
+    &.active {
       color: white;
       border-bottom: 3.5px white solid;
     }
   }
 }
-@mixin base(){
-  height: 24px;
-  width: 24px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: right;
-  position: relative;
-}
-.base1,
-.base2,
-.base3 {
 
-  &:hover{
-  
-    .alert{
-      display: none;
-    }
-  }
+.alert{
 
-  
-}
-
-  .base1 {
-  background-image: url("../images/alert-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-
-  &.white-icon {
-    filter: brightness(0) invert(1); // Turn the background image white
-  }
-
-
-}
-.base2 {
-  @include base();
-
-  background-image: url("../images/announcements.svg");
-}
-.base3 {
-  @include base();
-
-  background-image: url("../images/account_circle.svg");
-  height: 32px;
-  /* border-radius: 50%;
-  border: 1px solid #3FD28B; */
-  width: 32px;
-  .alert {
-    background-color: white;
-    top: -2%;
-    right: 0;
-    left: 60%;
-
-    bottom: 80%;
-  }
-  .noti-count {
-    font-size: 8px;
-    color: black;
-  }
-}
-
-.noti-count {
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
-}
-.alert {
   background-color: #2a7ff3;
   position: absolute;
   top: -2%;
@@ -132,4 +67,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
+
+img.base1,
+img.base2 {
+  width: 24px;
+  height: 24px;
+   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.white-icon {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.base3 {
+  position: relative; // Needed for absolute children like #user
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/account_circle.svg");
+
+  #user {
+    background-color: white;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .noti-count {
+      color: black;
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+}
+
+
+.noti-count {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+

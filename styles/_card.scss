@@ -111,7 +111,7 @@
 
   .card-content {
     display: flex;
-    margin-top: 25px;
+    margin-top: 10px;
     padding: 0 16px 0 24px;
     justify-content: space-between;
   }
@@ -236,6 +236,7 @@
 
   .card-image {
     img {
+      margin-top: 25px;
       width: 132px;
       height: 157px;
     }
@@ -304,7 +305,7 @@
 #class-select {
   min-width: 150px;
   width: 90%;
-  outline: none;
+  // outline: none;
   font-size: 16px;
   border: none;
   border-bottom: #0000002c 1px solid;
@@ -388,8 +389,8 @@
     }
 
     img {
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
     }
   }
   @media (min-width: 768px) and (max-width: 991px) {

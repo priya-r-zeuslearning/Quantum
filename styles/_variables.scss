@@ -31,6 +31,10 @@ border-bottom: 3px solid $info;
     margin-bottom: 3px;
   }
 }
+button{
+  background: none;
+  border: none;
+}
 @mixin bodyAlign{
     
   margin: 0;
